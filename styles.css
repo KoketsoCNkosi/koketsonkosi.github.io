@@ -1432,3 +1432,40 @@
                 padding: 0;
             }
         }
+
+        @media (max-width: 768px) {
+  .hero,
+  .about,
+  .projects,
+  .contact {
+    background: var(--bg-dark) !important;
+    background-blend-mode: normal !important;
+  }
+
+  .hero::before,
+  .about::before,
+  .projects::before,
+  .contact::before {
+    display: none !important;
+  }
+
+  .hero h1,
+  .hero .subtitle,
+  .hero-description,
+  .section-title,
+  .section-subtitle {
+    color: #ffffff !important;
+    -webkit-text-fill-color: unset !important;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    background: var(--primary) !important;
+    color: white !important;
+    border: none !important;
+  }
+
+  .project-image {
+    background: var(--gradient-primary) !important;
+  }
+}
