@@ -1216,7 +1216,8 @@ footer p {
         left: 0;
         width: 100%;
         height: calc(100vh - 70px);
-        background: rgba(255, 255, 255, 0.98);
+        background: #fff; /* Change from rgba(255,255,255,0.98) to solid white */
+        z-index: 2000;    /* Ensure it's above other content */
         backdrop-filter: blur(15px);
         flex-direction: column;
         justify-content: start;
