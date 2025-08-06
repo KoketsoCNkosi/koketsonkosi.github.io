@@ -7,14 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-  function toggleTheme() {
-    const body = document.body;
-    body.classList.toggle('dark-theme');
-    const btn = document.getElementById('themeToggle');
-    btn.innerText = body.classList.contains('dark-theme') ? '☀️' : '🌙';
-  }
-</script>
 <body>
     <!-- Loading Screen -->
     <div class="loading" id="loading">
@@ -40,8 +32,6 @@
         </div>
     </nav>
 
-    <button id="themeToggle" onclick="toggleTheme()">🌙</button>
-
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-shapes">
@@ -51,10 +41,10 @@
             <div class="shape"></div>
         </div>
         <div class="hero-content">
-            <div class="hero-greeting">👋 Hello, I'm</div>
+            <div class="hero-greeting"><b>👋 Hello, I'm</b></div>
             <h1>Koketso Nkosi</h1>
-            <p class="subtitle">Aspiring Full Stack Developer</p>
-            <p class="hero-description">Crafting beautiful, responsive web experiences with Java, PHP, JavaScript, and cutting-edge technologies. Let's build something amazing together!</p>
+            <p class="subtitle"><b>Aspiring Full Stack Developer</b></p>
+            <p class="hero-description">Crafting beautiful experiences using cutting-edge technologies.</p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">🚀 View My Work</a>
                 <a href="#contact" class="btn btn-secondary">💬 Get In Touch</a>
@@ -67,13 +57,13 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Passionate developer with a love for creating innovative solutions and beautiful user experiences</p>
+                <p class="section-subtitle">Passionate developer with a love for creating innovative solutions and beautiful user experiences, with an Interest in Power BI, DBA, Cloud Computing and Business Analytics</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a passionate full stack developer with expertise in Java, PHP, JavaScript, HTML, CSS, and MySQL. I love creating efficient, scalable solutions and bringing ideas to life through code.</p>
-                    <p>With a strong foundation in both frontend and backend technologies, I enjoy tackling complex problems and building applications that make a real difference. My journey in web development has taught me the importance of writing clean, maintainable code and creating user-centered designs.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open source projects, sharing knowledge with the developer community, or enjoying a good cup of coffee while brainstorming the next big idea.</p>
+                    <p>I love creating efficient, scalable solutions and bringing ideas to life through code. I work very best with people and strive to be the best in what I do, I bring change and creativity in everything, my work stands out because I pride myself with it, I’m very flexible to any work because I push myself to the limits</p>
+                    <p>With a foundation in both frontend and backend technologies, I enjoy tackling complex problems and building applications that make a real difference.I work very best with people and strive to be the best in what I do, I bring change and creativity in everything, my work stands out because I pride myself with it, I’m very flexible to any work because I push myself to the limits My journey in web development has taught me the importance of writing clean, maintainable code and creating user-centered designs.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, watching movies, reading novels and a lot of daydreaming LOL! I enjoy my time alone and always eager to learn something new and feed myself with new knowledge.</p>
                     
                     <div class="about-stats">
                         <div class="stat-item">
@@ -158,44 +148,101 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        🛒
+                        <img src="images/healthcare.jpg" alt="Project Preview" class="project-img" />
                         <div class="project-overlay">
-                            <a href="#" class="btn btn-primary">🔍 View Details</a>
                         </div>
                     </div>
                     <div class="project-content">
                         <h3>Healthcare Management System</h3>
-                        <p>A comprehensive e-commerce solution built with Java Spring Boot and MySQL, featuring user authentication, payment integration, inventory management, and an intuitive admin dashboard with real-time analytics.</p>
+                        <p>A comprehensive healthcare management system featuring patient registration, appointment booking, medical records, billing, and an intuitive admin dashboard with real-time analytics.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">HTML/CSS</span>
-                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">CSS</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">🌐 Live Demo</a>
-                            <a href="https://github.com/KoketsoCNkosi/Healthcare_Management_System " class="project-link">📂 GitHub</a>
+                            <a href="https://koketsocnkosi.github.io/Healthcare-Management-System/" class="project-link">🌐 Live Demo</a>
+                            <a href="https://github.com/KoketsoCNkosi/Healthcare-Management-System" class="project-link">📂 GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        📝
+                        <img src="images/onboarding.jpg" alt="Project Preview" class="project-img" />
                         <div class="project-overlay">
-                            <a href="#" class="btn btn-primary">🔍 View Details</a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Content Management System</h3>
-                        <p>A custom CMS built with PHP and MySQL, featuring dynamic content management, user role permissions, SEO optimization, and a modern responsive admin interface with drag-and-drop functionality.</p>
+                        <h3>Employee Onboarding System</h3>
+                        <p>A streamlined employee onboarding platform with digital form processing, document management, and progress tracking for HR departments.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/KoketsoCNkosi/Employee-Onboarding-System" class="project-link">📂 GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/music.png" alt="Project Preview" class="project-img" />
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Music Player</h3>
+                        <p>A modern web-based music player with playlist management, audio visualization, shuffle/repeat functionality, and responsive design for all devices.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Web Audio API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://koketsocnkosi.github.io/Music-Player/" class="project-link">🌐 Live Demo</a>
+                            <a href="https://github.com/KoketsoCNkosi/Music-Player" class="project-link">📂 GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/countdown.jpg" alt="Project Preview" class="project-img" />
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Countdown Timer App</h3>
+                        <p>A versatile countdown timer application with multiple timer support.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Local Storage</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://koketsocnkosi.github.io/Countdown-Timer-App/" class="project-link">🌐 Live Demo</a>
+                            <a href="https://github.com/KoketsoCNkosi/Countdown-Timer-App" class="project-link">📂 GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/auto4sale.jpg" alt="Project Preview" class="project-img" />
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Auto4Sale</h3>
+                        <p>A comprehensive automotive marketplace platform with vehicle listings, advanced search filters, dealer management, and secure payment integration.</p>
                         <div class="project-tech">
                             <span class="tech-tag">PHP</span>
                             <span class="tech-tag">MySQL</span>
                             <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">Bootstrap</span>
-                            <span class="tech-tag">jQuery</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">🌐 Live Demo</a>
@@ -206,24 +253,152 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        📊
+                        <img src="images/calculator.jpg" alt="Project Preview" class="project-img" />
                         <div class="project-overlay">
-                            <a href="#" class="btn btn-primary">🔍 View Details</a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Analytics Dashboard</h3>
-                        <p>A real-time analytics dashboard with interactive charts, data visualization, and reporting features. Built with vanilla JavaScript and Chart.js, providing insights through beautiful and responsive data presentations.</p>
+                        <h3>Calculator App</h3>
+                        <p>A feature-rich calculator application with scientific functions, history tracking, keyboard support, and multiple themes for enhanced user experience.</p>
                         <div class="project-tech">
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Chart.js</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Math.js</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">🌐 Live Demo</a>
-                            <a href="#" class="project-link">📂 GitHub</a>
+                            <a href="https://koketsocnkosi.github.io/Calculator-App/" class="project-link">🌐 Live Demo</a>
+                            <a href="https://github.com/KoketsoCNkosi/Calculator-App" class="project-link">📂 GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/todo.png" alt="Project Preview" class="project-img" />
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>To Do List</h3>
+                        <p>A sleek task management application with priority levels, due dates, categories, and progress tracking features.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Local Storage</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://koketsocnkosi.github.io/To_Do_List_App/" class="project-link">🌐 Live Demo</a>
+                            <a href="https://github.com/KoketsoCNkosi/To_Do_List_App" class="project-link">📂 GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/recipe.jpg" alt="Project Preview" class="project-img" />
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Recipe Book App</h3>
+                        <p>A Recipe-Book on how to make the best dishes, it includes ingredients, cooking timers, nutritional information, and you can share with your friends!.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://koketsocnkosi.github.io/Recipe-Book/" class="project-link">🌐 Live Demo</a>
+                            <a href="https://github.com/KoketsoCNkosi/Recipe-Book" class="project-link">📂 GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/superhero.jpg" alt="Project Preview" class="project-img" />
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Superhero App</h3>
+                        <p>An interactive superhero app with character profiles, power comparisons, team builder functionality, and comic book integration.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://koketsocnkosi.github.io/Superhero_App/" class="project-link">🌐 Live Demo</a>
+                            <a href="https://github.com/KoketsoCNkosi/Superhero_App" class="project-link">📂 GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/zoo.png" alt="Project Preview" class="project-img"/>
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Zoo App</h3>
+                        <p>A virtual zoo app with animal profiles, feeding schedules, visitor information, interactive maps, and educational content for wildlife conservation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://koketsocnkosi.github.io/Zoo_App/" class="project-link">🌐 Live Demo</a>
+                            <a href="https://github.com/KoketsoCNkosi/Zoo_App" class="project-link">📂 GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/worldclock.jpg" alt="Project Preview" class="project-img"/>
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>World Clock App</h3>
+                        <p>A global time zone app with multiple city support, time zone converter, and beautiful digital time displays.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Time Zone API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://koketsocnkosi.github.io/World-Time-App/" class="project-link">🌐 Live Demo</a>
+                            <a href="https://github.com/KoketsoCNkosi/World-Time-App" class="project-link">📂 GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/speed.png" alt="Project Preview" class="project-img"/>
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Speed Calculator App</h3>
+                        <p>A speed calculation app with distance/time/speed conversions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Geolocation API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://koketsocnkosi.github.io/Speed-Calculator/" class="project-link">🌐 Live Demo</a>
+                            <a href="https://github.com/KoketsoCNkosi/Speed-Calculator" class="project-link">📂 GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -242,7 +417,7 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Let's Connect</h3>
-                    <p>I'm always interested in hearing about new opportunities and exciting projects. Whether you have a question, want to collaborate, or just want to say hi, I'll do my best to get back to you promptly!</p>
+                    <p>I'm interested in hearing about new opportunities and exciting projects. Whether you have a question, want to collaborate, or just want to say hi, I'll do my best to get back to you promptly!</p>
                     
                     <div class="contact-details">
                         <div class="contact-item">
@@ -269,10 +444,16 @@
                     </div>
                     
                     <div class="social-links">
-                        <a href="#" title="GitHub" aria-label="GitHub Profile">🐙</a>
-                        <a href="#" title="LinkedIn" aria-label="LinkedIn Profile">💼</a>
-                        <a href="#" title="Twitter" aria-label="Twitter Profile">🐦</a>
-                        <a href="#" title="Email" aria-label="Send Email">📧</a>
+                        <a href="https://github.com/KoketsoCNkosi" title="GitHub" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer">
+                            <img src="images/github.png" alt="GitHub" class="social-icon">
+                        </a>
+                        <a href="https://www.linkedin.com/in/koketso-nkosi" title="LinkedIn" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">
+                            <img src="images/linkedIn.png" alt="LinkedIn" class="social-icon">
+                        </a>
+                        <a href="mailto:koketsochrismashego@gmail.com" title="Email" aria-label="Send Email">
+                            <img src="images/email.jpg" alt="Email" class="social-icon">
+                        </a>
+
                     </div>
                 </div>
                 
@@ -302,7 +483,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Your Name. All rights reserved. Built with passion, code, and lots of coffee ☕</p>
+            <p>&copy; 2025 Koketso Nkosi. All rights reserved. Built with passion, code, and lots of coffee ☕</p>
         </div>
     </footer>
 
