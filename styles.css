@@ -11,7 +11,7 @@
     --primary-light: #fde047;
     --secondary: #000000;
     --accent: #1f2937;
-    --white: #ffffff;
+    --white: #ffffffd3;
     --gray-light: #f9fafb;
     --gray-medium: #6b7280;
     --gray-dark: #374151;
@@ -121,14 +121,12 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
     z-index: 1000;
+    background: var(--bg-primary);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-md);
     padding: 0.8rem 0;
     transition: var(--transition-normal);
-    border-bottom: 1px solid rgba(251, 191, 36, 0.08);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
 }
 
 nav.scrolled {
@@ -1216,8 +1214,7 @@ footer p {
         left: 0;
         width: 100%;
         height: calc(100vh - 70px);
-        background: #fff; /* Change from rgba(255,255,255,0.98) to solid white */
-        z-index: 2000;    /* Ensure it's above other content */
+        background: rgba(58, 38, 38, 0.144);
         backdrop-filter: blur(15px);
         flex-direction: column;
         justify-content: start;
@@ -1230,34 +1227,25 @@ footer p {
 
     .nav-links.active {
         transform: translateX(0);
+        opacity: 1;
     }
-
-    .nav-links li {
-        margin: 1rem 0;
-        transform: translateY(15px);
-        opacity: 0;
-        animation: slideInUp 0.4s ease forwards;
-    }
-
-    .nav-links li:nth-child(1) { animation-delay: 0.1s; }
-    .nav-links li:nth-child(2) { animation-delay: 0.2s; }
-    .nav-links li:nth-child(3) { animation-delay: 0.3s; }
-    .nav-links li:nth-child(4) { animation-delay: 0.4s; }
-    .nav-links li:nth-child(5) { animation-delay: 0.5s; }
 
     .nav-links a {
-        font-size: 1.2rem;
-        padding: 0.8rem 1.5rem;
-        border-radius: var(--radius-lg);
+        color: var(--text-primary);
+        background: var(--gray-light);
+        border: 1px solid var(--primary);
+        margin: 0.3rem 0;
         transition: var(--transition-smooth);
-        border: 1px solid transparent;
     }
 
     .nav-links a:hover {
         background: var(--primary);
-        color: var(--secondary);
-        transform: scale(1.02);
-        border-color: var(--primary);
+        color: var(--white);
+        border-color: var(--primary-dark);
+    }
+
+    body.nav-open {
+        overflow: hidden;
     }
 
     .mobile-menu {
@@ -1585,4 +1573,59 @@ footer p {
 
 .social-icon:hover {
   transform: scale(1.15);
+}
+
+/* --- Fix for mobile menu background and nav visibility --- */
+@media (max-width: 768px) {
+  .nav-links {
+    background: var(--bg-primary); /* Solid readable background */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: var(--text-primary);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .nav-links a {
+    color: var(--text-primary);
+    background: var(--gray-light);
+    border: 1px solid var(--primary);
+    margin: 0.3rem 0;
+    transition: var(--transition-smooth);
+  }
+
+  .nav-links a:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary-dark);
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+}
+
+/* --- Dark Mode Fallback for Mobile Nav --- */
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+  .nav-links {
+    background: var(--bg-dark);
+    color: var(--text-white);
+  }
+
+  .nav-links a {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-white);
+    border: 1px solid var(--primary);
+  }
+
+  .nav-links a:hover {
+    background: var(--primary);
+    color: var(--secondary);
+  }
 }
