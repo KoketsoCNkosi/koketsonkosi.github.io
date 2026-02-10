@@ -3,20 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Koketso Nkosi - Full Stack Developer specializing in Java, PHP, and modern web technologies">
+    <meta name="theme-color" content="#6366f1">
     <title>Koketso Nkosi - Full Stack Developer</title>
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Optimized font loading -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading" id="loading">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Loading Screen with progress -->
+    <div class="loading" id="loading" role="status" aria-label="Loading">
         <div class="spinner"></div>
+        <p class="loading-text">Loading portfolio...</p>
     </div>
 
-    <!-- Navigation -->
-    <nav id="navbar">
+    <!-- Navigation with improved accessibility -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
-            <div class="logo">KN</div>
+            <div class="logo" aria-label="Koketso Nkosi">
+                <span class="logo-text">KN</span>
+                <span class="logo-pulse"></span>
+            </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -24,868 +40,323 @@
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="mobile-menu" id="mobileMenu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon sun">☀️</span>
+                    <span class="theme-icon moon">🌙</span>
+                </button>
+                <button class="mobile-menu" id="mobileMenu" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-greeting"><b>👋 Hello, I'm</b></div>
-            <h1>Koketso Nkosi</h1>
-            <p class="subtitle"><b>Aspiring Full Stack Developer</b></p>
-            <p class="hero-description">Crafting beautiful experiences using cutting-edge technologies.</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">🚀 View My Work</a>
-                <a href="#contact" class="btn btn-secondary">💬 Get In Touch</a>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section with enhanced visuals -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="gradient-orb orb-1"></div>
+                <div class="gradient-orb orb-2"></div>
+                <div class="gradient-orb orb-3"></div>
             </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about scroll-animate">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Passionate developer with a love for creating innovative solutions and beautiful user experiences, with an Interest in Power BI, DBA, Cloud Computing and Business Analytics</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I love creating efficient, scalable solutions and bringing ideas to life through code. I work very best with people and strive to be the best in what I do, I bring change and creativity in everything, my work stands out because I pride myself with it, I’m very flexible to any work because I push myself to the limits</p>
-                    <p>With a foundation in both frontend and backend technologies, I enjoy tackling complex problems and building applications that make a real difference.I work very best with people and strive to be the best in what I do, I bring change and creativity in everything, my work stands out because I pride myself with it, I’m very flexible to any work because I push myself to the limits My journey in web development has taught me the importance of writing clean, maintainable code and creating user-centered designs.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, watching movies, reading novels and a lot of daydreaming LOL! I enjoy my time alone and always eager to learn something new and feed myself with new knowledge.</p>
-                    
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">1+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Client Satisfaction</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Support Available</span>
-                        </div>
-                    </div>
+            <div class="hero-grid"></div>
+            <div class="hero-content">
+                <div class="hero-greeting" data-aos="fade-down">
+                    <span class="wave">👋</span> Hello, I'm
                 </div>
-                <div class="about-visual">
-                    <div class="profile-container">
-                        <div class="profile-bg"></div>
-                        <div class="profile-image">👨‍💻</div>
-                    </div>
+                <h1 data-aos="fade-up" data-aos-delay="100">
+                    <span class="gradient-text">Koketso Nkosi</span>
+                </h1>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="200"><span class="highlight">Full Stack Developer</span>
+                </p>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                    Crafting beautiful digital experiences with modern technologies
+                </p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#projects" class="btn btn-primary">
+                        <span class="btn-icon">🚀</span>
+                        <span>View My Work</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span class="btn-icon">💬</span>
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+                <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="500">
+                    <span>Scroll to explore</span>
+                    <div class="scroll-arrow">↓</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills scroll-animate">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">My Skills</h2>
-                <p class="section-subtitle">I specialize in full stack development with a focus on creating robust, scalable applications using modern technologies</p>
-            </div>
-            
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">☕</div>
-                    <h3>Java</h3>
-                    <p>Enterprise application development, Spring Framework, microservices architecture, and robust backend solutions with strong OOP principles</p>
+        <!-- About Section with improved layout -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Get to know me</span>
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">
+                        Passionate developer with a love for creating innovative solutions and beautiful user experiences
+                    </p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🐘</div>
-                    <h3>PHP</h3>
-                    <p>Dynamic web applications, Laravel framework, RESTful APIs, and server-side scripting with modern PHP practices</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🌐</div>
-                    <h3>Frontend</h3>
-                    <p>Modern HTML5, CSS3, JavaScript (ES6+), responsive design, and creating engaging user interfaces with accessibility in mind</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🗄️</div>
-                    <h3>MySQL</h3>
-                    <p>Database design, optimization, complex query development, data modeling, and performance tuning for scalable applications</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>VS Code</h3>
-                    <p>Expert in Visual Studio Code extensions, debugging, Git integration, and productivity workflows for efficient development</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">⚡</div>
-                    <h3>Full Stack</h3>
-                    <p>End-to-end development, API design, system architecture, DevOps practices, and seamless integration between frontend and backend</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects scroll-animate">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">A showcase of my recent work and technical expertise across different domains and technologies</p>
-            </div>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/healthcare.jpg" alt="Project Preview" class="project-img" />
-                        <div class="project-overlay">
+                <div class="about-content">
+                    <div class="about-text" data-aos="fade-right">
+                        <div class="about-card">
+                            <p class="lead">
+                                I'm passionate about creating efficient, scalable solutions that bring ideas to life through clean code and thoughtful design.
+                            </p>
+                            <p>
+                                With expertise in both frontend and backend technologies, I specialize in building full-stack applications using Java, PHP, and modern web technologies. My approach combines technical excellence with user-centered design principles.
+                            </p>
+                            <p>
+                                Currently exploring DevOps, Cloud Computing, DBA, and Business Systems to expand my skillset and deliver data-driven solutions. I thrive in collaborative environments and continuously push myself to learn and grow.
+                            </p>
+                            <p>
+                                When I'm not coding, you'll find me watching movies, reading novels, or exploring new technologies. I'm always eager to take on new challenges and contribute to meaningful projects.
+                            </p>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Healthcare Management System</h3>
-                        <p>A comprehensive healthcare management system featuring patient registration, appointment booking, medical records, billing, and an intuitive admin dashboard with real-time analytics.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://koketsocnkosi.github.io/Healthcare-Management-System/" class="project-link">🌐 Live Demo</a>
-                            <a href="https://github.com/KoketsoCNkosi/Healthcare-Management-System" class="project-link">📂 GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/onboarding.jpg" alt="Project Preview" class="project-img" />
-                        <div class="project-overlay">
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Employee Onboarding System</h3>
-                        <p>A streamlined employee onboarding platform with digital form processing, document management, and progress tracking for HR departments.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/KoketsoCNkosi/Employee-Onboarding-System" class="project-link">📂 GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/music.png" alt="Project Preview" class="project-img" />
-                        <div class="project-overlay">
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Music Player</h3>
-                        <p>A modern web-based music player with playlist management, audio visualization, shuffle/repeat functionality, and responsive design for all devices.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">Web Audio API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://koketsocnkosi.github.io/Music-Player/" class="project-link">🌐 Live Demo</a>
-                            <a href="https://github.com/KoketsoCNkosi/Music-Player" class="project-link">📂 GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/countdown.jpg" alt="Project Preview" class="project-img" />
-                        <div class="project-overlay">
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Countdown Timer App</h3>
-                        <p>A versatile countdown timer application with multiple timer support.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">Local Storage</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://koketsocnkosi.github.io/Countdown-Timer-App/" class="project-link">🌐 Live Demo</a>
-                            <a href="https://github.com/KoketsoCNkosi/Countdown-Timer-App" class="project-link">📂 GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/auto4sale.jpg" alt="Project Preview" class="project-img" />
-                        <div class="project-overlay">
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Auto4Sale</h3>
-                        <p>A very modern automotive website platform which shows vehicle listings, advanced search filters, dealer management, and secure payment integration.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://koketsocnkosi.github.io/Auto4Sale/" class="project-link">🌐 Live Demo</a>
-                            <a href="https://github.com/KoketsoCNkosi/Auto4Sale" class="project-link">📂 GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/calculator.jpg" alt="Project Preview" class="project-img" />
-                        <div class="project-overlay">
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Calculator App</h3>
-                        <p>A feature-rich calculator application with scientific functions, history tracking, keyboard support, and multiple themes for enhanced user experience.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">Math.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://koketsocnkosi.github.io/Calculator-App/" class="project-link">🌐 Live Demo</a>
-                            <a href="https://github.com/KoketsoCNkosi/Calculator-App" class="project-link">📂 GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/todo.png" alt="Project Preview" class="project-img" />
-                        <div class="project-overlay">
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>To Do List</h3>
-                        <p>A sleek task management application with priority levels, due dates, categories, and progress tracking features.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">Local Storage</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://koketsocnkosi.github.io/To_Do_List_App/" class="project-link">🌐 Live Demo</a>
-                            <a href="https://github.com/KoketsoCNkosi/To_Do_List_App" class="project-link">📂 GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/recipe.jpg" alt="Project Preview" class="project-img" />
-                        <div class="project-overlay">
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Recipe Book App</h3>
-                        <p>A Recipe-Book on how to make the best dishes, it includes ingredients, cooking timers, nutritional information, and you can share with your friends!.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://koketsocnkosi.github.io/Recipe-Book/" class="project-link">🌐 Live Demo</a>
-                            <a href="https://github.com/KoketsoCNkosi/Recipe-Book" class="project-link">📂 GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/superhero.jpg" alt="Project Preview" class="project-img" />
-                        <div class="project-overlay">
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Superhero App</h3>
-                        <p>An interactive superhero app with character profiles, power comparisons, team builder functionality, and comic book integration.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">REST API</span>
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://koketsocnkosi.github.io/Superhero_App/" class="project-link">🌐 Live Demo</a>
-                            <a href="https://github.com/KoketsoCNkosi/Superhero_App" class="project-link">📂 GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/zoo.png" alt="Project Preview" class="project-img"/>
-                        <div class="project-overlay">
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Zoo App</h3>
-                        <p>A virtual zoo app with animal profiles, feeding schedules, visitor information, interactive maps, and educational content for wildlife conservation.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://koketsocnkosi.github.io/Zoo_App/" class="project-link">🌐 Live Demo</a>
-                            <a href="https://github.com/KoketsoCNkosi/Zoo_App" class="project-link">📂 GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/worldclock.jpg" alt="Project Preview" class="project-img"/>
-                        <div class="project-overlay">
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>World Clock App</h3>
-                        <p>A global time zone app with multiple city support, time zone converter, and beautiful digital time displays.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">Time Zone API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://koketsocnkosi.github.io/World-Time-App/" class="project-link">🌐 Live Demo</a>
-                            <a href="https://github.com/KoketsoCNkosi/World-Time-App" class="project-link">📂 GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/speed.png" alt="Project Preview" class="project-img"/>
-                        <div class="project-overlay">
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Speed Calculator App</h3>
-                        <p>A speed calculation app with distance/time/speed conversions.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">Geolocation API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://koketsocnkosi.github.io/Speed-Calculator/" class="project-link">🌐 Live Demo</a>
-                            <a href="https://github.com/KoketsoCNkosi/Speed-Calculator" class="project-link">📂 GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact scroll-animate">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" style="color: white;">Get In Touch</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Let's discuss your next project or collaboration opportunity. I'm always excited to work on innovative solutions!</p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>I'm interested in hearing about new opportunities and exciting projects. Whether you have a question, want to collaborate, or just want to say hi, I'll do my best to get back to you promptly!</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">📧</div>
-                            <div class="contact-text">
-                                <h4>Email</h4>
-                                <p>Koketsochrisnkosi@gmail.com</p>
+                        
+                        <div class="about-stats" data-aos="fade-up" data-aos-delay="200">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="15+">0</div>
+                                <div class="stat-label">Projects</div>
                             </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📱</div>
-                            <div class="contact-text">
-                                <h4>Phone</h4>
-                                <p>+27 60 784 6220</p>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="5">0</div>
+                                <div class="stat-label">Years Experience</div>
                             </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-text">
-                                <h4>Location</h4>
-                                <p>Pretoria</p>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="100">0</div>
+                                <div class="stat-label">Client Satisfaction</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Available</div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="social-links">
-                        <a href="https://github.com/KoketsoCNkosi" title="GitHub" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer">
-                            <img src="images/github.png" alt="GitHub" class="social-icon">
-                        </a>
-                        <a href="https://www.linkedin.com/in/koketso-nkosi" title="LinkedIn" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">
-                            <img src="images/linkedIn.png" alt="LinkedIn" class="social-icon">
-                        </a>
-                        <a href="mailto:koketsochrismashego@gmail.com" title="Email" aria-label="Send Email">
-                            <img src="images/email.jpg" alt="Email" class="social-icon">
-                        </a>
-
+                    <div class="about-visual" data-aos="fade-left">
+                        <div class="profile-container">
+                            <div class="profile-glow"></div>
+                            <div class="profile-card">
+                                <div class="profile-image">
+                                    <span class="emoji-profile">👨‍💻</span>
+                                </div>
+                                <div class="profile-badges">
+                                    <span class="badge">Full Stack</span>
+                                    <span class="badge">Problem Solver</span>
+                                    <span class="badge">Team Player</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section with interactive cards -->
+        <section id="skills" class="skills section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">My expertise</span>
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <p class="section-subtitle">
+                        Specialized in full-stack development with modern tools and frameworks
+                    </p>
                 </div>
                 
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                <div class="skills-grid">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="skill-icon">☕</div>
+                        <h3>Java</h3>
+                        <p>Enterprise development with Spring Boot, microservices, and OOP best practices</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" data-level="85"></div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="skill-icon">🐘</div>
+                        <h3>PHP</h3>
+                        <p>Modern PHP with Laravel, RESTful APIs, and server-side development</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" data-level="80"></div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-icon">⚛️</div>
+                        <h3>Frontend</h3>
+                        <p>HTML5, CSS3, JavaScript ES6+, responsive design, and modern frameworks</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" data-level="90"></div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or idea..." required></textarea>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-icon">🗄️</div>
+                        <h3>MySQL</h3>
+                        <p>Database design, optimization, complex queries, and performance tuning</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" data-level="85"></div>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">🚀 Send Message</button>
-                </form>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="skill-icon">🔧</div>
+                        <h3>Tools & DevOps</h3>
+                        <p>VS Code, Git, Docker, CI/CD, and modern development workflows</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" data-level="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="skill-icon">📊</div>
+                        <h3>Analytics</h3>
+                        <p>Power BI, data visualization, business intelligence, and cloud platforms</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" data-level="70"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Projects Section with filtering -->
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">My work</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">
+                        A showcase of my recent work across different domains
+                    </p>
+                </div>
+
+                <!-- Project Filters -->
+                <div class="project-filters" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web-app">Web Apps</button>
+                    <button class="filter-btn" data-filter="utility">Utilities</button>
+                    <button class="filter-btn" data-filter="showcase">Showcase</button>
+                </div>
+                
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projects will be dynamically loaded -->
+                </div>
+
+                <div class="projects-cta" data-aos="fade-up">
+                    <a href="https://github.com/KoketsoCNkosi" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                        <span>View All Projects on GitHub</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Let's connect</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">
+                        Have a project in mind? Let's discuss how we can work together
+                    </p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info" data-aos="fade-right">
+                        <div class="contact-card">
+                            <h3>Let's Create Something Amazing</h3>
+                            <p>
+                                I'm always interested in hearing about new opportunities and exciting projects. 
+                                Whether you have a question or just want to say hi, I'll do my best to get back to you!
+                            </p>
+                            
+                            <div class="contact-methods">
+                                <a href="mailto:Koketsochrisnkosi@gmail.com" class="contact-method">
+                                    <div class="method-icon">📧</div>
+                                    <div class="method-info">
+                                        <h4>Email</h4>
+                                        <p>Koketsochrisnkosi@gmail.com</p>
+                                    </div>
+                                </a>
+                                <a href="tel:+27607846220" class="contact-method">
+                                    <div class="method-icon">📱</div>
+                                    <div class="method-info">
+                                        <h4>Phone</h4>
+                                        <p>+27 60 784 6220</p>
+                                    </div>
+                                </a>
+                                <div class="contact-method">
+                                    <div class="method-icon">📍</div>
+                                    <div class="method-info">
+                                        <h4>Location</h4>
+                                        <p>Pretoria, South Africa</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="social-links">
+                                <a href="https://github.com/KoketsoCNkosi" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/koketso-nkosi" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                </a>
+                                <a href="mailto:koketsochrisnkosi@gmail.com" class="social-link" aria-label="Email">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm" data-aos="fade-left">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="" required autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="" required autocomplete="email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or idea..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span class="btn-icon">🚀</span>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Koketso Nkosi. All rights reserved. Built with passion, code, and lots of coffee ☕</p>
+            <div class="footer-content">
+                <p>&copy; 2025 Koketso Nkosi. All rights reserved.</p>
+                <p class="footer-tagline">Built with passion, code, and lots of coffee ☕</p>
+            </div>
         </div>
     </footer>
 
-    <script>
-        // Loading screen
-        window.addEventListener('load', function() {
-            setTimeout(() => {
-                document.getElementById('loading').classList.add('fade-out');
-                setTimeout(() => {
-                    document.getElementById('loading').style.display = 'none';
-                }, 500);
-            }, 1000);
-        });
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
 
-        // Mobile menu toggle
-        const mobileMenu = document.getElementById('mobileMenu');
-        const navLinks = document.getElementById('navLinks');
-
-        mobileMenu.addEventListener('click', function() {
-            mobileMenu.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerOffset = 80;
-                    const elementPosition = target.offsetTop;
-                    const offsetPosition = elementPosition - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Navbar scroll effect and active link highlighting
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            const scrolled = window.scrollY > 50;
-            
-            if (scrolled) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-
-            // Active link highlighting
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Form submission with enhanced validation and feedback
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Enhanced validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            
-            if (!data.name.trim()) {
-                showNotification('Please enter your full name.', 'error');
-                return;
-            }
-            
-            if (!data.email.trim() || !emailRegex.test(data.email)) {
-                showNotification('Please enter a valid email address.', 'error');
-                return;
-            }
-            
-            if (!data.subject.trim()) {
-                showNotification('Please enter a subject.', 'error');
-                return;
-            }
-            
-            if (!data.message.trim() || data.message.trim().length < 10) {
-                showNotification('Please enter a message with at least 10 characters.', 'error');
-                return;
-            }
-
-            // Show loading state
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '⏳ Sending...';
-            submitBtn.disabled = true;
-
-            // Simulate form submission (replace with actual submission logic)
-            setTimeout(() => {
-                showNotification('Thank you for your message! I\'ll get back to you soon. 🚀', 'success');
-                this.reset();
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }, 2000);
-        });
-
-        // Notification system
-        function showNotification(message, type = 'info') {
-            // Remove existing notifications
-            const existingNotifications = document.querySelectorAll('.notification');
-            existingNotifications.forEach(notification => notification.remove());
-
-            const notification = document.createElement('div');
-            notification.className = `notification notification-${type}`;
-            notification.innerHTML = `
-                <div class="notification-content">
-                    <span class="notification-icon">${type === 'success' ? '✅' : type === 'error' ? '❌' : 'ℹ️'}</span>
-                    <span class="notification-message">${message}</span>
-                    <button class="notification-close" onclick="this.parentElement.parentElement.remove()">×</button>
-                </div>
-            `;
-            
-            // Add notification styles
-            notification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                right: 20px;
-                background: ${type === 'success' ? 'var(--gradient-success)' : type === 'error' ? 'var(--gradient-secondary)' : 'var(--gradient-primary)'};
-                color: white;
-                padding: 1rem 1.5rem;
-                border-radius: var(--radius-xl);
-                box-shadow: var(--shadow-2xl);
-                z-index: 10000;
-                max-width: 400px;
-                transform: translateX(450px);
-                transition: transform 0.3s ease;
-                backdrop-filter: blur(20px);
-            `;
-
-            notification.querySelector('.notification-content').style.cssText = `
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-            `;
-
-            notification.querySelector('.notification-close').style.cssText = `
-                background: none;
-                border: none;
-                color: white;
-                font-size: 1.2rem;
-                cursor: pointer;
-                margin-left: auto;
-                padding: 0 0.5rem;
-            `;
-
-            document.body.appendChild(notification);
-            
-            // Animate in
-            setTimeout(() => {
-                notification.style.transform = 'translateX(0)';
-            }, 100);
-
-            // Auto remove after 5 seconds
-            setTimeout(() => {
-                notification.style.transform = 'translateX(450px)';
-                setTimeout(() => notification.remove(), 300);
-            }, 5000);
-        }
-
-        // Animate elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                    
-                    // Animate children with stagger effect
-                    const children = entry.target.querySelectorAll('.skill-card, .project-card, .stat-item');
-                    children.forEach((child, index) => {
-                        setTimeout(() => {
-                            child.style.opacity = '1';
-                            child.style.transform = 'translateY(0)';
-                        }, index * 100);
-                    });
-                }
-            });
-        }, observerOptions);
-
-        // Observe sections and cards
-        document.querySelectorAll('.scroll-animate').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Initialize animations for skill cards and project cards
-        document.querySelectorAll('.skill-card, .project-card, .stat-item').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        });
-
-        // Parallax effect for hero section
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            const heroContent = document.querySelector('.hero-content');
-            
-            if (hero && heroContent) {
-                const speed = scrolled * 0.5;
-                heroContent.style.transform = `translateY(${speed}px)`;
-            }
-        });
-
-        // Enhanced typing effect for hero text
-        function typeWriter(element, text, speed = 50) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        // Initialize typing effect after page load
-        window.addEventListener('load', function() {
-            setTimeout(() => {
-                const heroTitle = document.querySelector('.hero h1');
-                const originalText = heroTitle.textContent;
-                typeWriter(heroTitle, originalText, 100);
-            }, 1500);
-        });
-
-        // Theme switcher (optional - can be activated)
-        function initThemeSwitcher() {
-            const themeSwitcher = document.createElement('button');
-            themeSwitcher.innerHTML = '🌙';
-            themeSwitcher.style.cssText = `
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                border: none;
-                background: var(--gradient-primary);
-                color: white;
-                font-size: 1.5rem;
-                cursor: pointer;
-                box-shadow: var(--shadow-lg);
-                z-index: 1000;
-                transition: var(--transition-bounce);
-            `;
-
-            themeSwitcher.addEventListener('click', function() {
-                document.body.classList.toggle('dark-theme');
-                this.innerHTML = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
-                this.style.transform = 'scale(1.1)';
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                }, 200);
-            });
-
-            themeSwitcher.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.1) rotate(10deg)';
-            });
-
-            themeSwitcher.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1) rotate(0deg)';
-            });
-
-            document.body.appendChild(themeSwitcher);
-        }
-
-        // Uncomment to enable theme switcher
-        // initThemeSwitcher();
-
-        // Performance optimization: Lazy load images
-        function lazyLoadImages() {
-            const images = document.querySelectorAll('img[data-src]');
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-
-            images.forEach(img => imageObserver.observe(img));
-        }
-
-        // Initialize lazy loading
-        lazyLoadImages();
-
-        // Cursor trail effect (optional enhancement)
-        function initCursorTrail() {
-            const trail = [];
-            const trailLength = 20;
-
-            for (let i = 0; i < trailLength; i++) {
-                const dot = document.createElement('div');
-                dot.className = 'cursor-trail';
-                dot.style.cssText = `
-                    position: fixed;
-                    width: 4px;
-                    height: 4px;
-                    background: var(--gradient-primary);
-                    border-radius: 50%;
-                    pointer-events: none;
-                    z-index: 9999;
-                    opacity: ${1 - i / trailLength};
-                    transition: opacity 0.3s ease;
-                `;
-                document.body.appendChild(dot);
-                trail.push(dot);
-            }
-
-            document.addEventListener('mousemove', (e) => {
-                trail.forEach((dot, index) => {
-                    setTimeout(() => {
-                        dot.style.left = e.clientX + 'px';
-                        dot.style.top = e.clientY + 'px';
-                    }, index * 20);
-                });
-            });
-        }
-
-        // Uncomment to enable cursor trail
-        // initCursorTrail();
-
-        // Easter egg: Konami code
-        let konamiCode = [];
-        const konamiSequence = [
-            'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
-            'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
-            'KeyB', 'KeyA'
-        ];
-
-        document.addEventListener('keydown', function(e) {
-            konamiCode.push(e.code);
-            if (konamiCode.length > konamiSequence.length) {
-                konamiCode.shift();
-            }
-            
-            if (konamiCode.join(',') === konamiSequence.join(',')) {
-                showNotification('🎉 Konami Code activated! You found the easter egg!', 'success');
-                // Add some fun animation
-                document.body.style.animation = 'rainbow 2s linear';
-                setTimeout(() => {
-                    document.body.style.animation = '';
-                }, 2000);
-            }
-        });
-
-        // Add rainbow animation for easter egg
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes rainbow {
-                0% { filter: hue-rotate(0deg); }
-                25% { filter: hue-rotate(90deg); }
-                50% { filter: hue-rotate(180deg); }
-                75% { filter: hue-rotate(270deg); }
-                100% { filter: hue-rotate(360deg); }
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Initialize all features
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('🚀 Portfolio loaded successfully!');
-            console.log('💡 Tip: Try the Konami code for a surprise!');
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="animations.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
