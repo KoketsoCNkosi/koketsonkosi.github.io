@@ -3,6 +3,8 @@ class PortfolioApp {
     constructor() {
         this.currentFilter = 'all';
         this.theme = localStorage.getItem('theme') || 'light';
+        this.revealObserver = null;
+        this.smoothReveal = null;
         this.init();
     }
 
@@ -70,20 +72,22 @@ class PortfolioApp {
         // Initialize parallax effect
         new ParallaxEffect();
         
-        // Initialize smooth reveal
-        const smoothReveal = new SmoothReveal();
-        
-        // Reveal cards when they're visible
-        const revealObserver = new IntersectionObserver((entries) => {
+        // Initialize smooth reveal — store on instance so renderProjects() can use it
+        this.smoothReveal = new SmoothReveal();
+
+        // Set up the reveal observer — only observe skill cards here
+        // because project cards don't exist in the DOM yet
+        this.revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    smoothReveal.reveal([entry.target]);
+                    this.smoothReveal.reveal([entry.target]);
                 }
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.skill-card, .project-card').forEach(card => {
-            revealObserver.observe(card);
+        // Skill cards are already in the HTML so observe them now
+        document.querySelectorAll('.skill-card').forEach(card => {
+            this.revealObserver.observe(card);
         });
     }
 
@@ -181,14 +185,17 @@ class PortfolioApp {
         projectsToRender.forEach((project, index) => {
             const projectCard = this.createProjectCard(project, index);
             projectsGrid.appendChild(projectCard);
+
+            // Now that the card is in the DOM, register it with the observer
+            if (this.revealObserver) {
+                this.revealObserver.observe(projectCard);
+            }
         });
     }
 
     createProjectCard(project, index) {
         const card = document.createElement('div');
         card.className = 'project-card';
-        card.setAttribute('data-aos', 'fade-up');
-        card.setAttribute('data-aos-delay', index * 100);
         card.setAttribute('data-category', project.category);
 
         const tags = project.tags.map(tag => 
